@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+        <PostBuildEvent>
+            mkdir "C:\Program Files (x86)\Steam\steamapps\common\Rogue Genesia\Modded\Mods\MobDensityTest" 2>nul
+            copy /Y "$(TargetDir)MobDensityTest.dll" "C:\Program Files (x86)\Steam\steamapps\common\Rogue Genesia\Modded\Mods\MobDensityTest"
+        </PostBuildEvent>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="Lib.Harmony" Version="2.2.2" />
+        <Reference Include="ModGenesia">
+            <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data/Managed/ModGenesia.dll</HintPath>
+        </Reference>
+        <Reference Include="RogueGenesia">
+            <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data/Managed/RogueGenesia.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine">
+            <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data/Managed/UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data/Managed/UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Localization">
+            <HintPath>C:/Program Files (x86)/Steam/steamapps/common/Rogue Genesia/Modded/Rogue Genesia_Data/Managed/Unity.Localization.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project> 

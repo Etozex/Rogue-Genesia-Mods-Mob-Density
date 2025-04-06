@@ -1,0 +1,7 @@
+{
+    "name": "MobDensityTest",
+    "version_number": "1.0.0",
+    "website_url": "",
+    "description": "Reduces the number of enemies in circular spawn events to prevent lag and make them more manageable.",
+    "dependencies": []
+} 
